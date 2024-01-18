@@ -1,0 +1,16 @@
+.vertical-center-task-list{
+  padding: 4px;
+  width: 400px;
+  border: 2px solid #2fc8ee;
+  margin:auto;
+
+}
+
+.task{
+  border-bottom: 1px solid #4faa93;
+}
+
+.task:last-child{
+  border: none;
+  padding: 0px;
+}

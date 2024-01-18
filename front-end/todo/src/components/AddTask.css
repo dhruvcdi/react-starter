@@ -1,0 +1,19 @@
+.add-btn{
+    background-image: url(./assets/more.png);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent; /* make the button transparent */
+background-repeat: no-repeat;  /* make the background image appear only once */
+background-position: 0px 0px;  /* equivalent to 'top left' */
+border: none;           /* assuming we don't want any borders */
+cursor: pointer;        /* make the cursor like hovering over an <a> element */
+height: 20px;           /* make this the size of your image */
+padding-left: 16px;     /* make text start to the right of the image */
+vertical-align: middle; /* align the text vertically centered */
+
+}
+
+.add-comp{
+    margin: 4px;
+    padding: 2px;
+}
