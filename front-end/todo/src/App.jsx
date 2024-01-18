@@ -11,6 +11,12 @@ function App() {
 
   function deleteTask(e){
     console.log(e.target.parentNode.attributes.getNamedItem('index').value)
+    let index = e.target.parentNode.attributes.getNamedItem('index').value;
+    if(index > -1){
+      taskList.splice(index,1);
+      console.log(taskList)
+      setTaskList(taskList.filter((v,i)=> i !== index))
+    }
   }
   return (
     <>
