@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import AddTask from './components/AddTask'
-
+import DeleteLogo from './assets/delete.png'
 import './App.css'
 
 function App() {
@@ -12,10 +12,14 @@ function App() {
   return (
     <>
     <AddTask setTaskList={setTaskList} taskList={taskList}/>
-      <div className='vertical-center-task-list'>
+      <div className='vertical-center-task-list' >
         {
           taskList.map(t =>
-            <h3 className='task'>{t}</h3>
+            <div className='task'>
+            <h3 >{t}</h3>
+             <img src={DeleteLogo} className='del-btn'  />
+            </div>
+                      
           )
 
         }

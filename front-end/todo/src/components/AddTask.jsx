@@ -16,7 +16,7 @@ export default function AddTask(props){
 
    return (
     <div className='add-comp'>
-       <input type='text' value={task} onChange={e=>setTask(e.target.value)}></input>
+       <input type='text' placeholder='Add Task here...' value={task} onChange={e=>setTask(e.target.value)}></input>
        <img src={MoreLogo} className='add-btn' onClick={addProduct} />
        
     </div>
