@@ -9,21 +9,24 @@ function App() {
   
   const [taskList,setTaskList]=useState(["Task 1: Create Login page", "Task 2: Create Css file", " Task 3: Create api for login"])
 
+  function deleteTask(e){
+    console.log(e.target.parentNode.attributes.getNamedItem('index').value)
+  }
   return (
     <>
     <AddTask setTaskList={setTaskList} taskList={taskList}/>
-      <div className='vertical-center-task-list' >
+      <ul className='vertical-center-task-list' >
         {
-          taskList.map(t =>
-            <div className='task'>
+          taskList.map((t,index) =>
+            <li className='task' index={index}>
             <h3 >{t}</h3>
-             <img src={DeleteLogo} className='del-btn'  />
-            </div>
+             <img src={DeleteLogo} className='del-btn' onClick={deleteTask}/>
+            </li>
                       
           )
 
         }
-      </div>
+      </ul>
     </>
   )
 }
